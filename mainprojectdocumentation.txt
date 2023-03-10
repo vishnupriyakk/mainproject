@@ -1,0 +1,56 @@
+project:TRAFFIC SIGN DETECTION
+
+   Train and classify Traffic Signs using Convolutional neural networks This will be done using  OpenCV in real-time using a simple webcam. CNN's have been gaining popularity in the past couple of years due to their ability to generalize and classify the data with high accuracy. In this project, we will train traffic signs with over 35000 images of 43 different classes with the help of TensorFlow and Keras.
+
+
+Training data:
+
+The code is an implementation of a Convolutional Neural Network (CNN) to classify images. 
+It starts by setting the parameters, such as the path to the dataset, the batch size, the number of epochs, and the image dimensions.
+ Then, it imports the required libraries, including 
+                                                  NumPy
+                                                  Matplotlib 
+                                                  Keras 
+                                                  OpenCV
+                                                  Pandas
+                                                  Scikit-learn.
+
+Next, the code reads the dataset and separates it into training, validation, and testing sets.
+ It also performs some data validation to ensure that the number of images and labels match and that the dimensions of the images are correct.
+ It then reads a CSV file containing the names of the classes and displays some sample images for each class.
+
+      After that, the code defines some functions for preprocessing the images, including converting them to grayscale, equalizing their lighting, and normalizing their values between 0 and 1.
+ It then applies these preprocessing steps to the training, validation, and testing sets.
+
+      Finally, the code creates the CNN model, which includes several convolutional, pooling, and dense layers. 
+It also compiles the model using the Adam optimizer and sets the loss function and metrics. It then trains the model on the training set, validates it on the validation set, and evaluates it on the testing set. 
+Finally, it saves the trained model and displays the accuracy and loss curves.
+
+
+
+Testing data:
+
+
+
+This code is a Python script for detecting traffic signs using a pre-trained convolutional neural network.
+ It uses OpenCV library to capture video frames from a camera, and then applies image processing functions to these frames before feeding them to the trained model for classification. 
+The pre-trained model is loaded from a pickle file that contains the trained weights and architecture of the network.
+
+           The script first defines some parameters such as camera resolution, brightness, and probability threshold.
+ It then sets up the camera and loads the pre-trained model. Next, 
+it defines some image processing functions such as grayscale and histogram equalization, and a preprocessing function that applies these functions to the input image.
+
+           In the main loop of the script, it reads a frame from the camera, 
+resizes it to 32x32 pixels, and preprocesses it using the preprocessing function. 
+It then reshapes the preprocessed image to have the required input shape for the model,
+ and feeds it to the model for prediction. If the highest predicted probability is greater than the probability threshold,
+ it outputs the predicted class label and probability on the original frame using OpenCV's text drawing functions.
+
+           The script also defines a function called getCalssName that maps the integer class labels to human-readable class names.
+Overall, the script performs real-time traffic sign detection using a pre-trained CNN,
+ and is capable of recognizing 43 different types of traffic signs.
+
+
+
+
+
